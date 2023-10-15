@@ -11,7 +11,10 @@ def opportunities(request):
     return render(request,'opportunities.html')
 
 def adult(request):
-    return render(request,'events/adult.html')
+    return render(request,'adult.html')
 
 def childeren(request):
-    return render(request,'events/childeren.html')
+    return render(request,'childeren.html')
+
+def events(request):
+    return render(request,'events.html')

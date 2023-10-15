@@ -21,7 +21,7 @@ from App import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home_page,name='homepage'),
-    path('opportunities/', views.home_page,name='opportunities'),
-    path('support/', views.home_page,name='support'),
+    path('opportunities/', views.opportunities,name='opportunities'),
+    path('support/', views.support,name='support'),
     path('events/', include('App.urls')),
 ]

@@ -9,17 +9,7 @@
 
         
           <a href="{% url 'homepage' %}" class="a">HOME</a>
-          <div class="btn-group">
-            <button type="button" class="btn btn-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: #E3F6FF;  font-size: large;
-            font-family: Avenir-Medium, sans-serif;">
-              EVENTS
-            </button>
-            <ul class="dropdown-menu" style="background-color:  #9DF1DF;">
-              <li><a class="adropdown" href="{% url 'App:childeren' %}">CHILDEREN</a></li>
-              <li><a class="adropdown"  href="{% url 'App:adult' %}">ADULT</a></li>
-           
-             
-          </div>
+          <a href="{% url 'App:events' %}" class="a">EVENTS</a>
           <a href="{% url 'opportunities' %}" class="a">OPPORTUNITIES</a>
           <a href="{% url 'support' %}" class="a">SUPPORT</a>
            <!-- Example single danger button -->
