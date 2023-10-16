@@ -1,21 +1,61 @@
 header{
 
-    background-color: #9DF1DF;
-    position: sticky;
-    top: 0;
+     background-color: #9DF1DF; 
+     
+    
+
 }
-.a{
-    font-size: large;
-    font-family: Avenir-Medium, sans-serif;
-    color: #E3F6FF;
+ul li a{
+    color: aliceblue;
     text-decoration: none;
     
 }
+body{
+    height: auto;
+    padding: 0;
+    margin: 0;
+   }
+    .background-img{
+        width: 100%;
+        height: 100vh;
+        background-image: url('./images/hottel.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
 
-ul li a.adropdown{
-    text-align: center;
-    color: #E3F6FF;
-    text-decoration: none;
-    font-family: Avenir-Medium,sans-serif;
-    font-size: small;
-}
+    }
+    header{
+        position: sticky;
+        top: 0px;
+        width: 100%;
+        height: 70x;
+        background: rgba(0,0,0,0);
+        padding-bottom: 30px;
+        padding-top: 30px;
+        
+        
+        
+
+    }
+    header ul{
+        margin: 0;
+        display: flex;
+        gap: 10px;
+    }
+    header ul li{
+        color: aliceblue;
+        list-style: none;
+    }
+    header{
+        
+        display: flex;
+        justify-content: space-between;
+    }
+    .text{
+      height: 100%;
+      display: flex;
+      padding: 180px;
+      color: aliceblue;
+      justify-content: flex-start;
+      
+    }

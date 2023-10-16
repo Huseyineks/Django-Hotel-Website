@@ -1,7 +1,7 @@
 
 {% load static %}
 <!-- <header class="p-3 mb-3"> -->
-    <header>
+    <!-- <header style="position: sticky; top: 0px; z-index: 999;">
     <div class="container">
       <div class="d-flex flex-wrap" style="display: flex; justify-content: space-between; align-items: center;">
         <img src="{% static 'images/navlogo.png' %}" alt="logo" style="z-index: 2;" height="100px
@@ -12,7 +12,7 @@
           <a href="{% url 'App:events' %}" class="a">EVENTS</a>
           <a href="{% url 'opportunities' %}" class="a">OPPORTUNITIES</a>
           <a href="{% url 'support' %}" class="a">SUPPORT</a>
-           <!-- Example single danger button -->
+          
 
 
         
@@ -20,4 +20,48 @@
         
       </div>
     </div>
-  </header>
+  </header> -->
+  {% if request.path == '/' %}
+  <div class="background-img">
+    <header>
+       <ul>
+        <li>PANDORA</li>
+       </ul>
+    
+      <ul style="gap: 25px;">
+        
+        <li><a href="{% url 'homepage' %}">Home</a></li>
+        <li><a href="{% url 'App:events' %}">Events</a></li>
+        <li><a href="{% url 'opportunities' %}">Features</a></li>
+        <li style="margin-right: 100px;"><a href="{% url 'support' %}">Support</a></li>
+      </ul>
+    
+    </header>
+    
+    <div class="text">
+        <div>
+        <h2>THE BEST İN THE WORLD</h2>
+        <p style="margin-top: 50px;">THE BEST ALWAYS DESERVE THE BEST.</p>
+    </div>
+    </div>
+</div>
+{% else %}
+
+<header>
+  <ul>
+   <li>PANDORA</li>
+  </ul>
+
+ <ul style="gap: 25px;">
+   
+   <li><a href="{% url 'homepage' %}">Home</a></li>
+   <li><a href="{% url 'App:events' %}">Events</a></li>
+   <li><a href="{% url 'opportunities' %}">Features</a></li>
+   <li style="margin-right: 100px;"><a href="{% url 'support' %}">Support</a></li>
+ </ul>
+
+</header>
+
+
+</div>
+{% endif %}
