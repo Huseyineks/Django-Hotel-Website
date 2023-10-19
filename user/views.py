@@ -9,6 +9,6 @@ def SupportForm(request):
     if form.is_valid():
         
         newForm = form.save()
-        return redirect('support')
+        return redirect('homepage')
     return render(request,'support.html',context)
 
