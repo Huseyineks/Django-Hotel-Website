@@ -147,6 +147,38 @@ body{
         grid-column: 2/3;
         grid-row: 1/-1;
     }
+   .carousel-img-1{
+    background: url(./images/eminem.jpg!d) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: aliceblue;
+    text-align: right;
+    padding-top: 100px;
+    padding-right: 100px;
+    
+   }
+   .carousel-img-2{
+    background: url(./images/wiz.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: aliceblue;
+    text-align: right;
+    padding-top: 100px;
+    padding-right: 100px;
+    
+   }
+   .txt-order-column-r{
+       
+    grid-column: 2/3;
+    grid-row: 1/-1;
+}
+.img-c-r{
+    margin-left: 28px;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+}
   
 
    
