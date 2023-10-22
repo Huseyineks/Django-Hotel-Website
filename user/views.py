@@ -1,14 +1,15 @@
 from django.shortcuts import render,redirect
-from .forms import UserForm
+from .forms import  Form
+from django.views.generic import View
+class ContactView(View):
+    def get(self,request,*args,**kwargs):
+        return render(request,'contact.html')
+    
 
-def SupportForm(request):
-    form = UserForm(request.POST or None)
-    context = dict(
-        form = form
-    )
-    if form.is_valid():
-        
-        newForm = form.save()
-        return redirect('homepage')
-    return render(request,'support.html',context)
 
+    def post(self,request,*args,**kwargs):
+        form = Form(request.POST)
+        if form.is_valid():
+            newUser = form.save()
+            return redirect('homepage')
+        return render(request,'contact.html',{'form':form})

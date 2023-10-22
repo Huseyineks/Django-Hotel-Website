@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+        .grid-1{
+            grid-column: 1/2;
+            grid-row: 1/-1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-column: 2/3;
+            grid-row: 1/-1;
+            padding: 10px;
+        }
+
+        input{
+    display: block;
+}
+
+input{
+width: 500px;
+height: 60px;
+border-radius: 25px;
+background: rgba(0, 0, 0, 0.035);
+border: 1px;
+padding: 10px;
+
+}
+
+.input{
+    margin-bottom: 30px;
+}
+textarea{
+border-radius: 25px;
+padding: 10px;
+background: rgb(0,0,0,0.035);
+border: 1px;
+}
+button{
+margin-top: 20px;
+border: 1px;
+border-radius: 25px;
+color: aliceblue;
+background-color: green;
+height: 50px;
+width: 200px;
+}
+button:hover{
+background-color: black;
+}
+.button{
+width: 100%;
+text-align: center;
+}
+  
+    </style>
+</head>
+<body>
+    <div class="grid">
+    <div class="grid-1">
+       <img src="{% static 'images/img-01.png' %}" alt="">
+    </div>
+    <div class="grid-2">
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <h2 style="margin-bottom: 40px; width: 100%; text-align: center;">Get İn Touch</h2>
+        <div class = "input"><input type="text" placeholder="Name" name="name">
+         {% for err in form.name.errors %}
+         <small class="text-danger">
+            {{ err }}
+         </small>
+         {% endfor %}
+        
+        </div>
+        <div class = "input"><input type="text" placeholder="E-mail" name="email">
+            {% for err in form.name.errors %}
+            <small class="text-danger">
+               {{ err }}
+            </small>
+            {% endfor %}
+        
+        </div>
+        <div class = "input"><input type="text" placeholder="Subject" name="subject">
+            {% for err in form.name.errors %}
+            <small class="text-danger">
+               {{ err }}
+            </small>
+            {% endfor %}
+        </div>
+        <div><textarea name="message" id="" cols="64" rows="8" style="display: block;" placeholder="Message"></textarea>
+            {% for err in form.name.errors %}
+            <small class="text-danger">
+               {{ err }}
+            </small>
+            {% endfor %}
+        </div>
+        <div class="button">
+        <button type="submit" value="Submit">Send an email</button>
+       
+    
+    
+    </div>
+        </div> 
+        
+        
+        
+        </form> 
+    </div>
+</div>
+</body>
+</html>
