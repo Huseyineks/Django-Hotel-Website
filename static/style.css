@@ -1,9 +1,5 @@
 
-ul li a{
-    color: aliceblue;
-    text-decoration: none;
-    
-}
+
 body{
     
     padding: 0;
@@ -27,7 +23,8 @@ body{
         background: rgba(0,0,0,0);
         padding-bottom: 30px;
         padding-top: 30px;
-        
+        display: flex;
+        justify-content: space-between;
         
         
 
@@ -41,11 +38,12 @@ body{
         color: aliceblue;
         list-style: none;
     }
-    header{
+    header ul li a{
+        color: aliceblue;
+        text-decoration: none;
         
-        display: flex;
-        justify-content: space-between;
     }
+   
     .text{
       height: 100%;
       width: 100%;

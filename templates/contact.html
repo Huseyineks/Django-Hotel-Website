@@ -79,7 +79,7 @@ text-align: center;
     <form method="post">
         {% csrf_token %}
         <div>
-            <h2 style="margin-bottom: 40px; width: 100%; text-align: center;">Get İn Touch</h2>
+            <h2 style="margin-bottom: 40px; width: 100%; text-align: center;">Get In Touch</h2>
         <div class = "input"><input type="text" placeholder="Name" name="name">
          {% for err in form.name.errors %}
          <small class="text-danger">
@@ -123,5 +123,6 @@ text-align: center;
         </form> 
     </div>
 </div>
+{% include 'includes/footer.html' %}
 </body>
 </html>
